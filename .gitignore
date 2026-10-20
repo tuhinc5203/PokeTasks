@@ -1,0 +1,15 @@
+# Personal data -- written by the app next to the source, never commit
+TodoArchive.md
+
+# Private design notes
+Petv2.md
+
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
