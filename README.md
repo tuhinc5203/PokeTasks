@@ -114,7 +114,7 @@ Every Pokémon in the current version (Generation 1), each with a normal and a s
 1. **Clone the repo.**
 
    ```bash
-   git clone https://github.com/<your-username>/PokeTasks.git
+   git clone https://github.com/tuhinc5203/PokeTasks.git
    cd PokeTasks
    ```
 
