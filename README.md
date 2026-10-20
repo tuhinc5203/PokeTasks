@@ -59,7 +59,7 @@ Each Pokémon has its own heart that works like a completion streak.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/friendship-dark.png">
-    <img src="docs/images/friendship.png" width="240" alt="A heart filling up from empty to full">
+    <img src="docs/images/friendship.png" width="276" alt="A heart filling up from empty to full">
   </picture>
 </p>
 
@@ -84,7 +84,7 @@ When a Pokémon is at level 100, the next task you complete offers you the chanc
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/shiny-reset-dark.png">
-    <img src="docs/images/shiny-reset.png" width="640" alt="A level 100 Charizard resets to a level 1 shiny Charmander">
+    <img src="docs/images/shiny-reset.png" width="512" alt="A level 100 Charizard resets to a level 1 shiny Charmander">
   </picture>
 </p>
 
