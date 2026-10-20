@@ -79,7 +79,10 @@ The chain keeps going:
 When a Pokémon is at level 100, the next task you complete offers you the chance to **claim shiny**. Accept, and it goes back to **level 1 in its base form, permanently shiny**. Decline with "Not Yet" and you stay at level 100 until you're ready.
 
 <p align="center">
-  <img src="docs/images/shiny-reset.png" width="640" alt="A level 100 Charizard resets to a level 1 shiny Charmander">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/shiny-reset-dark.png">
+    <img src="docs/images/shiny-reset.png" width="640" alt="A level 100 Charizard resets to a level 1 shiny Charmander">
+  </picture>
 </p>
 
 This is a one-time reset for each Pokémon. You can also reset a Pokémon manually with the ↺ button in the header, or the whole collection from the PC Box (after confirming); a full reset adds a free **Choose your Starter!** task so you can hatch a new egg right away.
