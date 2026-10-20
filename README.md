@@ -57,7 +57,10 @@ A Pokémon's name follows its evolution automatically. Give it a nickname (doubl
 Each Pokémon has its own heart that works like a completion streak.
 
 <p align="center">
-  <img src="docs/images/friendship.png" width="480" alt="A heart filling up from empty to full">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/friendship-dark.png">
+    <img src="docs/images/friendship.png" width="480" alt="A heart filling up from empty to full">
+  </picture>
 </p>
 
 - **Goes up:** every task or subtask you complete while a Pokémon is active adds **1** heart level, up to **10**.
