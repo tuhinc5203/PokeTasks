@@ -1,9 +1,9 @@
 # PokeTasks
 
-<p>
-  <img src="Assets/Sprites/Gen_1/bulbasaur.png" width="64" alt="Bulbasaur">
-  <img src="Assets/Sprites/Gen_1/charmander.png" width="64" alt="Charmander">
-  <img src="Assets/Sprites/Gen_1/squirtle.png" width="64" alt="Squirtle">
+<p align="center">
+  <img src="Assets/Sprites/Gen_1/bulbasaur.png" width="128" alt="Bulbasaur">
+  <img src="Assets/Sprites/Gen_1/charmander.png" width="128" alt="Charmander">
+  <img src="Assets/Sprites/Gen_1/squirtle.png" width="128" alt="Squirtle">
 </p>
 
 A personal to-do list with a gamified twist that lives in your Mac's menu bar. Every task you check off levels up a Pokémon, and your collection grows as you get things done.
@@ -42,14 +42,10 @@ A personal to-do list with a gamified twist that lives in your Mac's menu bar. E
 Every completed task (or subtask) is **one level**, up to level 100. You start with three eggs: Bulbasaur, Charmander, and Squirtle. Your first completed task hatches the one you have active, and from there it evolves at its natural levels.
 
 <p align="center">
-  <img src="docs/images/evolution.png" width="760" alt="Egg to Bulbasaur at levels 1 to 15, Ivysaur at 16 to 31, Venusaur at 32 to 100">
+  <img src="docs/images/evolution.png" width="760" alt="An egg hatches into Bulbasaur at level 1, evolves into Ivysaur at level 16, then Venusaur at level 32">
 </p>
 
-| Starter line | Stage 1 | Stage 2 | Stage 3 |
-| --- | --- | --- | --- |
-| Bulbasaur | Bulbasaur, Lv. 1–15 | Ivysaur, Lv. 16–31 | Venusaur, Lv. 32–100 |
-| Charmander | Charmander, Lv. 1–15 | Charmeleon, Lv. 16–35 | Charizard, Lv. 36–100 |
-| Squirtle | Squirtle, Lv. 1–15 | Wartortle, Lv. 16–35 | Blastoise, Lv. 36–100 |
+Charmander and Squirtle follow the same path, evolving at levels 16 and 36.
 
 A Pokémon's name follows its evolution automatically. Give it a nickname (double-click the name) and your nickname sticks instead.
 
@@ -58,11 +54,10 @@ A Pokémon's name follows its evolution automatically. Give it a nickname (doubl
 Each Pokémon has its own heart that works like a completion streak.
 
 <p align="center">
-  <img src="docs/images/friendship.png" width="640" alt="A heart filling up from 0 of 10 to 10 of 10">
+  <img src="docs/images/friendship.png" width="480" alt="A heart filling up from empty to full">
 </p>
 
 - **Goes up:** every task or subtask you complete while a Pokémon is active adds **1** heart level, up to **10**.
-- **Heart burst:** every time the meter reaches 10, hearts burst around your Pokémon. This happens again each time it climbs back to 10 after dropping.
 - **Decays:** if you go **12 hours** without completing anything for that Pokémon, it loses 1 level, and keeps losing 1 for every further 12 hours, down to 0. Completing a task resets the clock.
 - **Only the active Pokémon decays.** Pokémon sitting in the PC Box are paused, and a Pokémon's clock starts fresh when you make it active again.
 - Resetting a Pokémon, or turning it shiny, resets its friendship to 0.
