@@ -42,7 +42,10 @@ A personal to-do list with a gamified twist that lives in your Mac's menu bar. E
 Every completed task (or subtask) is **one level**, up to level 100. You start with three eggs: Bulbasaur, Charmander, and Squirtle. Your first completed task hatches the one you have active, and from there it evolves at its natural levels.
 
 <p align="center">
-  <img src="docs/images/evolution.png" width="760" alt="An egg hatches into Bulbasaur at level 1, evolves into Ivysaur at level 16, then Venusaur at level 32">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/evolution-dark.png">
+    <img src="docs/images/evolution.png" width="760" alt="An egg hatches into Bulbasaur at level 1, evolves into Ivysaur at level 16, then Venusaur at level 32">
+  </picture>
 </p>
 
 Charmander and Squirtle follow the same path, evolving at levels 16 and 36.
