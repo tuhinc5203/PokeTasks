@@ -59,7 +59,7 @@ Each Pokémon has its own heart that works like a completion streak.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/friendship-dark.png">
-    <img src="docs/images/friendship.png" width="480" alt="A heart filling up from empty to full">
+    <img src="docs/images/friendship.png" width="240" alt="A heart filling up from empty to full">
   </picture>
 </p>
 
