@@ -25,6 +25,18 @@ A macOS menu bar "virtual pet to-do list" built around a **collection of Gen 1 P
 - `Assets/Sprites/Snorlax/` — the retired Snorlax/Munchlax sprites (8 files), tidied into their own folder, **not wired into the Xcode project at all** (nothing loads them).
 - `Assets/Sprites/pokeball2.png` — still the menu bar icon, packaged via the same Copy Files phase; `pokeball.png` (superseded) stays on disk, unreferenced.
 
+## Release procedure
+
+Every bug fix or new feature ships as a new version and is logged. Do not skip steps.
+
+1. Work on a branch off `main` (`fix/<name>` for bugs, `feature/<name>` for features). Commit the code change on its own.
+2. Pick the next version: bug fixes bump the minor version (v1.0 -> v1.1 -> v1.2), as the user chose; a major new feature set or a rewrite bumps the major version (v2.0).
+3. Add an entry at the top of `version_log.md`, newest first, in this format: `## vX.Y`, then a line with the type (`Bug fix`, `New feature`, ...), then `*` bullets explaining what changed in plain language.
+4. Bump `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` (+1) in `PokeTasks.xcodeproj/project.pbxproj` (appear twice, Debug and Release), and change the README title (`# PokeTasks vX.Y`).
+5. Build, test, and deploy locally. Then merge into `main` with `--no-ff`, tag it (`git tag -a vX.Y`), push `main` and the tag, and publish a GitHub release (`gh release create vX.Y --verify-tag`) using the `version_log.md` entry as the notes.
+6. Never move or delete an old tag or release, and never force-push `main`. `main` always holds the latest version, so cloning or pulling gets the newest release; older versions are only reachable by explicitly checking out their tag.
+7. Add a Change Log entry here for the code details.
+
 ## Change Log
 
 ### 2026-08-25 — Initial v1 build
