@@ -93,14 +93,23 @@ final class TaskListViewModel: ObservableObject {
             return
         }
         guard Date().timeIntervalSince(lastPruneAt) >= Self.globalClearInterval else { return }
-        tasks.removeAll { $0.isCompleted }
+        removeCompleted()
         persist()
         store.saveLastPruneAt(Date())
     }
 
     func clearCompletedTasks() {
-        tasks.removeAll { $0.isCompleted }
+        removeCompleted()
         persist()
+    }
+
+    /// Drops completed tasks, plus any completed subtasks still sitting under open tasks.
+    /// (A completed task's subtasks go with it.)
+    private func removeCompleted() {
+        tasks.removeAll { $0.isCompleted }
+        for index in tasks.indices {
+            tasks[index].subtasks.removeAll { $0.isCompleted }
+        }
     }
 
     private func persist() {

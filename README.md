@@ -1,4 +1,4 @@
-# PokeTasks v1.0
+# PokeTasks v1.1
 
 <p align="center">
   <img src="Assets/Sprites/Gen_1/bulbasaur.png" width="128" alt="Bulbasaur">
