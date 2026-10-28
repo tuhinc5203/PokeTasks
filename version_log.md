@@ -2,6 +2,13 @@
 
 Every release of PokeTasks is recorded here, newest first.
 
+## v1.1.1
+
+Bug fix
+
+* Fixed the blank "New subtask" field getting stuck open. If you chose Add Subtask and left the field empty, the task's arrow couldn't collapse it and there was no way to remove it without typing something.
+* The arrow now hides the field when you collapse the task. An empty field also cancels itself when you click elsewhere, press Esc, or click the new X button on its right. The field is now focused as soon as it appears.
+
 ## v1.1
 
 Bug fix
