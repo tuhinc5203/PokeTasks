@@ -49,6 +49,7 @@ struct TaskRowView: View {
                         withAnimation(.easeInOut(duration: 0.15)) {
                             isExpanded.toggle()
                         }
+                        if !isExpanded { cancelNewSubtask() }
                     } label: {
                         Image(systemName: "chevron.right")
                             .font(.system(size: 9, weight: .semibold))
@@ -84,7 +85,7 @@ struct TaskRowView: View {
                 }
             }
 
-            if (!task.subtasks.isEmpty && isExpanded) || isAddingSubtask {
+            if isExpanded && (!task.subtasks.isEmpty || isAddingSubtask) {
                 VStack(alignment: .leading, spacing: 3) {
                     ForEach(task.subtasks) { subtask in
                         SubtaskRowView(
@@ -106,10 +107,22 @@ struct TaskRowView: View {
                                 .font(.system(size: 11))
                                 .focused($isNewSubtaskFieldFocused)
                                 .onSubmit(commitNewSubtask)
-                                .onExitCommand {
-                                    newSubtaskText = ""
-                                    isAddingSubtask = false
+                                .onExitCommand(perform: cancelNewSubtask)
+                                .onAppear { isNewSubtaskFieldFocused = true }
+                                .onChange(of: isNewSubtaskFieldFocused) { _, isFocused in
+                                    if !isFocused && newSubtaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                        cancelNewSubtask()
+                                    }
                                 }
+
+                            Spacer(minLength: 0)
+
+                            Button(action: cancelNewSubtask) {
+                                Image(systemName: "xmark")
+                                    .font(.system(size: 8, weight: .semibold))
+                                    .foregroundStyle(.tertiary)
+                            }
+                            .buttonStyle(.plain)
                         }
                     }
                 }
@@ -125,6 +138,11 @@ struct TaskRowView: View {
 
     private func commitNewSubtask() {
         onAddSubtask(newSubtaskText)
+        newSubtaskText = ""
+        isAddingSubtask = false
+    }
+
+    private func cancelNewSubtask() {
         newSubtaskText = ""
         isAddingSubtask = false
     }
